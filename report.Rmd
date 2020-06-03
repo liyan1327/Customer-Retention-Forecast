@@ -111,8 +111,8 @@ print(plot1)
 
 Consider a randomly-chosen member of the population who was newly acquired in January.  
 
-#### (a) What is the estimated probability that this customer will cancel service after only one month?  
-  
+(a) What is the estimated probability that this customer will cancel service after only one month?  
+
 The probability that a newly acquired customer will churn after exactly t periods is $P({T=t}|{a,b})=\dfrac{B(a+1,b+t-1)}{B(a,b)}$, which could be shown as the plot below. 
   
 ```{r warning=FALSE, message=FALSE, echo=FALSE}
@@ -138,8 +138,8 @@ beta(a+1,b+1-1)/beta(a,b)
 ```
   
   
-#### (b) What is the expected probability that this customer will cancel service after two months?  
-
+(b) What is the expected probability that this customer will cancel service after two months?  
+  
 For t=2 (customer churn after only one month), the estimated probability is  
 
 $$P({T=2}|{a,b})=\dfrac{B(a+1,b+t-1)}{B(a,b)}=\dfrac{B(0.829+1,1.565+2-1)}{B(0.829,1.565)}=`r round(beta(a+1,b+2-1)/beta(a,b), 3)`$$
@@ -147,7 +147,8 @@ $$P({T=2}|{a,b})=\dfrac{B(a+1,b+t-1)}{B(a,b)}=\dfrac{B(0.829+1,1.565+2-1)}{B(0.8
 beta(a+1,b+2-1)/beta(a,b) 
 ```
 
-#### (c) What is the probability this customer is still active?  
+(c) What is the probability this customer is still active?  
+  
 The probability that a newly acquired customer will retain beyond t periods is $$S({t}|{a,b})=\dfrac{B(a,b+t)}{B(a,b)}$$
 Because this customer was newly acquired in January, we expect this customer to retain beyond 8 months if this customer is still active. For t=8, the estimated probability is  
   
